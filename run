@@ -55,7 +55,7 @@ execute_and_echo() {
 
 # add sudo if we need to - and pass all arguments to the target
 if [[ $EUID -ne 0 ]]; then
-    execute_and_echo sudo python ./colour-spin.py "$@"
+    execute_and_echo sudo python3 ./colour-spin.py "$@"
 else
-    execute_and_echo python ./colour-spin.py "$@"
+    execute_and_echo python3 ./colour-spin.py "$@"
 fi
